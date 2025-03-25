@@ -1,0 +1,26 @@
+.navMoving {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+}
+
+.navMoving.scrolled {
+    background: linear-gradient(180deg, var(--main-background) 30%, var(--background-item) 100%);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .5rem 0;
+}
+
+@media (max-width: 1200px) {
+    .nav :global(.inNav) {
+        display: none;
+    }
+}

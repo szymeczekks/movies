@@ -1,0 +1,107 @@
+.container {
+    position: relative;
+    aspect-ratio: 16/9;
+}
+
+.carousel {
+    height: 100%;
+}
+
+.thumbsContainer {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translate(0, -50%);
+    height: calc(100% - 3rem);
+    z-index: 1;
+}
+
+.thumbs {
+    height: 100%;
+    padding: 0.40rem;
+}
+
+.thumbs :global(.swiper-slide-thumb-active) {
+    box-shadow: 0 0 0 0.15rem var(--main-color);
+}
+
+.thumbs :global(.swiper-slide-thumb-active)::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -0.35rem;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 0.35rem solid transparent;
+    border-bottom: 0.35rem solid transparent;
+    border-right: 0.35rem solid var(--main-color);
+}
+
+.thumbs :global(.swiper-slide) {
+    width: max-content;
+    height: auto;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+}
+
+.thumbs :global(.swiper-slide) img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.carousel :global(.swiper-button-prev) {
+    top: 0;
+    height: 1.5rem;
+    padding: 0 2.5rem;
+    left: unset;
+    right: calc(9% - 3rem);
+    transform: translate(-50%, 100%);
+}
+
+.carousel :global(.swiper-button-prev)::after {
+    transform: rotate(90deg);
+}
+
+.carousel :global(.swiper-button-next) {
+    bottom: 0;
+    top: unset;
+    height: 1.5rem;
+    padding: 0 2.5rem;
+    right: calc(9% - 3rem);
+    transform: translate(-50%, 0%);
+}
+
+.carousel :global(.swiper-button-next)::after {
+    transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+    .container {
+        aspect-ratio: unset;
+    }
+
+    .carousel {
+        aspect-ratio: 16/9;
+        height: unset;
+    }
+
+    .carousel :global(.swiper-button-next),
+    .carousel :global(.swiper-button-prev) {
+        display: none;
+    }
+
+    .thumbsContainer {
+        width: 100%;
+        position: inherit;
+        height: unset;
+        transform: translate(0, 0);
+        top: unset;
+        right: unset;
+    }
+
+    .thumbs :global(.swiper-slide-thumb-active)::before {
+        display: none;
+    }
+}

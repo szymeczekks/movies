@@ -1,0 +1,44 @@
+.heroSection {
+    /* height: 10rem; */
+    padding: 3rem 0;
+    margin-top: 2rem;
+    display: flex;
+    position: relative;
+}
+
+.heroSection :global(.wrapper) {
+    z-index: 1;
+    display: flex;
+    gap: 1rem;
+}
+
+.heroSection :global(.wrapper) > div {
+    flex: 1 1 100%;
+    max-width: 50%;
+}
+
+.heroSection::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,3,28,1) 50%, rgba(255,255,255,0) 100%);
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .heroSection :global(.wrapper) {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .heroSection :global(.wrapper) > div {
+        max-width: 100%;
+    }
+
+    .heroSection {
+        padding: 1.5rem 0;
+    }
+}

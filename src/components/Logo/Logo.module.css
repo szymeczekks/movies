@@ -1,0 +1,40 @@
+.logo {
+    color: var(--main-text-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: relative;
+    transition: color .3s ease-in-out;
+    padding-right: 1rem;
+}
+
+.logo sup {
+    font-weight: 400;
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.logo:hover {
+    color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .logo sup {
+        font-size: .875rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .logo sup {
+        font-size: .55rem;
+    }
+}

@@ -1,0 +1,43 @@
+.title {
+    font-weight: 600;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    position: relative;
+    height: 100%;
+}
+
+.description {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    background: var(--background-item);
+    height: 100%;
+    width: 100%;
+    left: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.overview {
+    font-size: .775rem;
+    color: var(--main-text-color);
+    font-weight: 300;
+    margin-bottom: auto;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.movie:hover .description {
+    left: 0;
+}

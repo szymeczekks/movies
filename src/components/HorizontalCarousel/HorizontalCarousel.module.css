@@ -1,0 +1,80 @@
+.carousel:global(.swiper)::after, .carousel:global(.swiper)::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    /* max-width: 2rem; */
+    background-color: #fff;
+    top: 0;
+    z-index: 2;
+}
+
+.carousel:global(.swiper)::after {
+    left: 100%;
+    width: calc((100vw - (10rem)) / 2);
+    background: rgb(0,3,28);
+    background: linear-gradient(270deg, rgba(0,3,28,1) 95%, rgba(255,255,255,0) 100%);
+}
+
+.carousel:global(.swiper)::before {
+    right: 100%;
+    width: calc((100vw - (10rem)) / 2);
+    background: rgb(0,3,28);
+    background: linear-gradient(90deg, rgba(0,3,28,1) 95%, rgba(255,255,255,0) 100%);
+}
+
+.carousel:global(.swiper) {
+    overflow: visible;
+}
+
+.carousel :global(.swiper-slide) {
+    width: calc((96rem / 6) - 1rem);
+    height: auto;
+    align-self: stretch;
+}
+
+:global(.swiper-button-next) {
+    right: 0;
+}
+
+:global(.swiper-button-prev) {
+    left: 0;
+}
+
+:global(.swiper-button-next),
+:global(.swiper-button-prev){
+    background-color: var(--main-background-transparent);
+    color: #fff;
+    padding: 2.5rem 0;
+    border-radius: .5rem;
+    transition: all .3s ease-in-out;
+}
+
+:global(.swiper-button-next):hover,
+:global(.swiper-button-prev):hover{
+    background-color: var(--main-color);
+}
+
+:global(.swiper-button-disabled) {
+    display: none;
+}
+
+:global(.swiper-button-next)::after,
+:global(.swiper-button-prev)::after{
+    font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .carousel :global(.swiper-slide) {
+        width: calc((60rem / 5) - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel:global(.swiper)::after {
+        left: 100%;
+    }
+    
+    .carousel:global(.swiper)::before {
+        right: 100%;
+    }
+}

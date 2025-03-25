@@ -1,0 +1,88 @@
+.navList {
+    display: flex;
+    transition: opacity .3s ease-in-out,top .3s ease-in-out;
+}
+
+.main {
+    flex: 1;
+}
+
+.navList li {
+    position: relative;
+    display: flex; 
+    align-items: center;
+    gap: .5rem;
+}
+
+.navList li a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    font-weight: 600;
+}
+
+.main > li:hover > a svg {
+    transform: rotate(180deg);
+}
+
+.main > li > ul a svg {
+    transform: rotate(-90deg);
+}
+
+.main > li > ul li:hover a svg{
+    transform: translateX(.25rem) rotate(-90deg);
+}
+
+.navList > li:hover > a {
+    color: var(--main-color);
+}
+
+.navList > li:hover > a svg {
+    fill: var(--main-color);
+}
+
+.navList ul {
+    flex-direction: column;
+    position: absolute;
+    top: 2rem;
+    left: 100%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+.main > li > .navList {
+    left: 0;
+    top: calc(100% + 2rem);
+}
+
+.navList > li:hover > .navList {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+
+.navList.main > li:hover > .navList > li .navList {
+    top: -2px;
+}
+
+.navList li.active > .navList  {
+    visibility: visible;
+    opacity: 1;
+}
+
+.main .navList {
+    background-color: var(--main-background);
+    border: 2px solid var(--main-color);
+    border-radius: .5rem;
+}
+
+.navList:not(.main) > li:not(:last-child) > a {
+    border-bottom: 1px dashed var(--main-color);
+}
+
+.navList svg {
+    width: 1rem;
+}

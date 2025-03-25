@@ -1,0 +1,10 @@
+.videoRating {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.videoRating svg {
+    width: 1rem;
+    fill: var(--main-color);
+}

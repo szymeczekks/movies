@@ -1,0 +1,60 @@
+.review {
+    display: flex;
+    gap: 1rem;
+    color: var(--gray-text-color);
+    align-items: start;
+}
+
+.content {
+    padding: 1rem 0;
+}
+
+.avatar {
+    max-width: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date {
+    margin-bottom: 1rem;
+}
+
+.author {
+    font-weight: 600;
+    color: var(--main-text-color);
+}
+
+.rating svg {
+    width: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .review {
+        flex-direction: column;
+        gap: .5rem;
+        font-size: .875rem;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .rating svg {
+        width: 1rem;
+    }
+
+    .avatar {
+        max-width: 5rem;
+    }
+
+    .meta {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,45 @@
+.arrow {
+    width: 1rem;
+    transform: rotate(-90deg);
+}
+
+.list {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.seeAll {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-align: right;
+}
+
+.top {
+    margin-bottom: 2rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list:has(.subtitle) .top {
+    margin-bottom: .5rem;
+}
+
+.subtitle {
+    color: var(--main-text-color);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .seeAll {
+        font-size: .875rem;
+        gap: .5rem;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
+    }
+}

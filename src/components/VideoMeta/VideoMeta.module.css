@@ -1,0 +1,59 @@
+.videoMeta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--main-text-color);
+}
+
+.small {
+    font-size: 0.875rem;
+}
+
+.videoMeta > * {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.videoMeta > *:not(:first-child) {
+    position: relative;
+    margin-left: 2rem;
+}
+
+.videoMeta.small > *:not(:first-child) {
+    margin-left: 1.5rem;
+}
+
+.videoMeta > *:not(:first-child)::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: calc(-1rem - 2px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.videoMeta.small > *:not(:first-child)::before {
+    left: calc(-0.75rem - 2px);
+}
+
+@media(max-width: 768px) {
+    .videoMeta > *:not(:first-child) {
+        margin-left: 1rem;
+    }
+
+    .videoMeta {
+        font-size: 0.875rem;
+    }
+
+    .small {
+        font-size: 0.675rem;
+    }
+
+    .videoMeta > *:not(:first-child)::before {
+        left: calc(-.5rem - 2px);
+    }
+}

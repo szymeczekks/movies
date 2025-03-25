@@ -1,0 +1,29 @@
+.modalList {
+    width: 100%;
+}
+
+.modalList a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    padding: .5rem 0;
+    border-bottom: 1px solid var(--white-transparent);
+}
+
+:global(.active) > .subMenu {
+    display: block;
+}
+
+:global(.active) > a .arrow {
+    transform: rotate(180deg);
+}
+
+.subMenu {
+    display: none;
+    padding-left: 1rem;
+}
+
+.arrow {
+    min-width: 1rem;
+}

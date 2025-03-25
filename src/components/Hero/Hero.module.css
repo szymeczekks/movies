@@ -1,0 +1,107 @@
+.hero {
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(76, 0, 255, 0.5),
+        rgba(0, 0, 0, 0.2)
+      );
+    position: relative;
+    color: var(--main-text-color);
+}
+
+.heroImage {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.heroContent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-box-shadow: inset 920px -240px 270px -132px var(--main-background-transparent);
+    -moz-box-shadow: inset 920px -240px 270px -132px var(--main-background-transparent);
+    box-shadow: inset 920px -240px 270px -132px var(--main-background-transparent);
+    
+    display: flex;
+    align-items: center;
+
+    /* display: flex;
+    flex-direction: column;
+    gap: 2rem; */
+}
+
+.heroContent > div {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.heroGenres {
+    font-size: 1rem;
+}
+
+.heroGenres a {
+    font-weight: 600;
+}
+
+.heroGenres a:hover {
+    color: var(--main-color);
+}
+
+.heroGenres span:last-child span {
+    display: none;
+}
+
+.heroTitle {
+    font-size: 2.5rem;
+    line-height: 5rem;
+    max-width: 50rem;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+.heroButtons a {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.heroButtons a svg {
+    width: 1rem;
+}
+
+.heroButtons a:hover svg {
+    fill: var(--main-color);
+}
+
+@media(max-width: 1024px) {
+    .heroContent > div {
+        gap: 1rem;
+    }
+
+    .heroTitle {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroButtons a {
+        font-size: 0.875rem;
+    }
+}

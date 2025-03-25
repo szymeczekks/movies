@@ -1,0 +1,31 @@
+
+.heroCarousel div:global(.swiper-button-next) {
+    right: 0;
+}
+
+.heroCarousel div:global(.swiper-button-prev) {
+    left: 0;
+}
+
+.heroCarousel div:global(.swiper-button-next),
+.heroCarousel div:global(.swiper-button-prev){
+    background-color: var(--main-background-transparent);
+    color: #fff;
+    padding: 2.5rem 0;
+    border-radius: .5rem;
+    transition: all .3s ease-in-out;
+}
+
+.heroCarousel div:global(.swiper-button-next):hover,
+.heroCarousel div:global(.swiper-button-prev):hover{
+    background-color: var(--main-color);
+}
+
+.heroCarousel div:global(.swiper-button-disabled) {
+    display: none;
+}
+
+.heroCarousel div:global(.swiper-button-next)::after,
+.heroCarousel div:global(.swiper-button-prev)::after{
+    font-size: 1rem;
+}

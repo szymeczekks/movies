@@ -1,0 +1,43 @@
+.heroDescription {
+    color: var(--main-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .heroDescription {
+        /* gap: 1rem; */
+    }
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: .875rem;
+        -webkit-line-clamp: 3;
+    }
+}

@@ -1,0 +1,12 @@
+.footer {
+    margin-top: auto;
+    padding: 2rem 0;
+    background-color: var(--background-item);
+    color: var(--main-text-color);
+}
+
+.footer p {
+    font-size: 0.875rem;
+    font-weight: 200;
+    color: var(--gray-text-color);
+}

@@ -1,0 +1,7 @@
+.noReviews {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 2rem;
+  color: var(--main-text-color);
+}

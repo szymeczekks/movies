@@ -1,0 +1,58 @@
+.topList h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid var(--white-transparent);
+    padding-bottom: 1rem;
+}
+
+.index {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex: 1;
+}
+
+.topList ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.topList li {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--white-transparent);
+}
+
+.image {
+    max-width: 4rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex: 10;
+    gap: 1rem;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.date {
+    color: var(--gray-text-color);
+}
+
+@media (max-width: 768px) {
+    .date, .title {
+        font-size: .875rem;
+    }
+
+    .index {
+        font-size: 1.25rem;
+    }
+
+    .topList h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,13 @@
+body {
+    --main-text-color: #ffffff;
+    --gray-text-color: #e3e3e4;
+    --main-color: #7b61ff;
+    --main-background: #00031c;
+    --main-background-transparent: #00031ce0;
+    --white-transparent: rgba(255, 255, 255, 0.3);
+    --gray: #c5c5c5;
+    --gray-darker: #777777;
+    --background-item: #191c33;
+    --background-item-lighter: #3a3d57;
+    --error-color: #ff4d4f;
+}

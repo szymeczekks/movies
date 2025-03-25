@@ -1,0 +1,40 @@
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.poster {
+    position: sticky;
+    top: 6rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: clamp(20rem, 30%, 30rem);
+}
+
+.poster button {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .poster {
+        position: static;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .poster img {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .poster {
+        gap: .5rem;
+    }
+    .social {
+        flex-direction: column;
+        gap: .5rem;
+    }
+}
