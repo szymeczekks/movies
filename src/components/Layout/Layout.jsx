@@ -4,7 +4,7 @@ import { Footer } from "../Footer/Footer";
 
 import styles from "./Layout.module.css";
 
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { AuthContext } from "../../context/AuthContext";
 import { ListContext } from "../../context/ListContext";
 import { useEffect, useMemo, useState } from "react";
