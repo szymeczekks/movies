@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { IMAGES } from '../../constants/api';
 import { translateGenres } from '../../functions/translateGenres';
-import styles from './AddToListItem.module.css';
+import styles from './DeleteFromListItem.module.css';
 import { VideoMeta } from '../VideoMeta/VideoMeta';
 import { VideoBadge } from '../VideoBadge/VideoBadge';
 import { ReactSVG } from 'react-svg';
@@ -11,9 +11,9 @@ import { useContext } from "react";
 import { LanguageContext } from "../../context/languageContext";
 import { ListContext } from '../../context/ListContext';
 
-export function AddToListItem({movie}) {
+export function DeleteFromListItem({movie}) {
     const [language] = useContext(LanguageContext);
-    const [list, addToList] = useContext(ListContext);
+    const [list, addToList, deleteFromList] = useContext(ListContext);
     const genres = translateGenres(movie.genre_ids);
 
     const isInList = list.includes(movie.id);
@@ -24,7 +24,7 @@ export function AddToListItem({movie}) {
                 <Link to={`/movie/${movie.id}`}>
                     <img src={`${IMAGES.secure_base_url}w342/${movie.poster_path}`} alt={movie.title}/>
                     <ReactSVG src={PLAY_ICON} className={styles.play}/>
-                    <button onClick={(e) => addToList(e, movie)} className={[styles.button, isInList ? styles.active : ''].join(' ')}>{isInList ? TEXTS[language].added_to_my_list : TEXTS[language].add_to_my_list}</button>
+                    <button onClick={(e) => deleteFromList(e, movie.id)} className={[styles.button, isInList ? styles.active : ''].join(' ')}>{TEXTS[language].delete_from_list}</button>
                 </Link>
             </div>
             <Link to={`/movie/${movie.id}`} className={styles.title}>{movie.title}</Link>

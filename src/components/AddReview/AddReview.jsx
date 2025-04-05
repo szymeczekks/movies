@@ -5,12 +5,14 @@ import { Stars } from '../Stars/Stars';
 import { useFetcher } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
+import { AuthContext } from '../../context/authContext';
 import { LanguageContext } from '../../context/languageContext';
 import { useContext, useEffect } from 'react';
 import { useState } from 'react';
 
 export function AddReview({reviewsLength, userData}) {
     const [language] = useContext(LanguageContext);
+    const {isAuth} = useContext(AuthContext);
     const { Form, data } = useFetcher();
     const { id } = useParams();
     const [ formErrors, setFormErrors ] = useState(null);
@@ -33,6 +35,14 @@ export function AddReview({reviewsLength, userData}) {
         }
     }, [data]);
 
+    /* if (!isAuth) {
+        return (
+            <div className={styles.notLogged}>
+                <h2 className={styles.title}>{TEXTS[language].add_review_title_not_logged_in}</h2>
+            </div>
+        );
+    } */
+
     return (
         <>
             <h2 className={styles.title}>{TEXTS[language].add_review_title}</h2>
@@ -50,7 +60,7 @@ export function AddReview({reviewsLength, userData}) {
                     {formErrors && formErrors.rating && <p className={styles.error}>{formErrors.rating[language]}</p>}
                 </div>
                 <div className={styles.inputWrapper}>
-                    <label htmlFor="content">{TEXTS[language].add_review_review}</label>
+                    <label htmlFor="content">{TEXTS[language].add_review_review}*</label>
                     <textarea name="content" id="content" value={content} onChange={(e) => setContent(e.currentTarget.value)}></textarea>
                     {formErrors && formErrors.content && <p className={styles.error}>{formErrors.content[language]}</p>}
                 </div>

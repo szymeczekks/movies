@@ -12,9 +12,11 @@ import INFO_ICON from '../../assets/info.svg';
 import BOOKMARK_ICON from '../../assets/bookmark.svg';
 import { useContext } from "react";
 import { LanguageContext } from "../../context/languageContext";
+import { ListContext } from '../../context/ListContext';
 
 export function MoviePreviewItem({ movie }) {
     const [ language ] = useContext(LanguageContext);
+    const [list, addToList] = useContext(ListContext);
     const [previewShow, setPreviewShow] = useState(false);
     const genres = translateGenres(movie.genre_ids);
     const movieRef = useRef(null);
@@ -78,7 +80,7 @@ export function MoviePreviewItem({ movie }) {
                 </VideoMeta>
                 <div className={styles.buttons}>
                     <Button type={['small']}>{TEXTS[language].see_details} <ReactSVG src={INFO_ICON}/> </Button>
-                    <Button type={['small', 'gray']}>{TEXTS[language].watch_later} <ReactSVG src={BOOKMARK_ICON}/></Button>
+                    <Button type={['small', 'gray']} onClick={(e) => addToList(e, movie)}>{TEXTS[language].watch_later} <ReactSVG src={BOOKMARK_ICON}/></Button>
                 </div>
             </div>
         </div>

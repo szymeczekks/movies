@@ -35,7 +35,7 @@ export function NavBar() {
                 <NavList className="inNav" />
                 <Search className="inNav"/>
                 <NavIcons/>
-                <Button className='inNav' onClick={() => {}}>{TEXTS[language].subscribe}</Button>
+                <Button className='inNav' to='/login'>{TEXTS[language].subscribe}</Button>
             </div>
         </div>
     </nav>

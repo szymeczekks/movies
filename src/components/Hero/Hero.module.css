@@ -85,10 +85,6 @@
     width: 1rem;
 }
 
-.heroButtons a:hover svg {
-    fill: var(--main-color);
-}
-
 @media(max-width: 1024px) {
     .heroContent > div {
         gap: 1rem;

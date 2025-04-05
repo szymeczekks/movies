@@ -1,4 +1,3 @@
-import { IMAGES } from '../../constants/api';
 import styles from './HeroSection.module.css';
 
 export function HeroSection({background, children}) {

@@ -82,7 +82,7 @@ div.rating svg {
     content: ',';
 }
 
-section:global(.wrapper) {
+.info section:global(.wrapper) {
     overflow: hidden;
     padding: 0;
 }

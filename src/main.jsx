@@ -15,6 +15,9 @@ import { categoryLoader } from './api/CategoriesLoader.js';
 import { Blog } from './views/Blog/Blog.jsx';
 import { blogLoader } from './api/BlogLoader.js';
 import { addReviewAction } from './api/AddReviewAction.js';
+import { Login } from './views/Login/Login.jsx';
+import { loginAction } from './api/LoginAction.js';
+import { MyList } from './views/MyList/MyList.jsx';
 
 const router = createBrowserRouter([
   {
@@ -50,13 +53,19 @@ const router = createBrowserRouter([
         path: "/blog",
         loader: blogLoader,
         element: <Blog/>,
+      },
+      {
+        path: "/login",
+        action: loginAction,
+        element: <Login/>,
+      },{
+        path: "/my-list",
+        element: <MyList/>,
       }
     ]
   }
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <RouterProvider router={router}/>
-  </StrictMode>,
+  <RouterProvider router={router}/>
 )

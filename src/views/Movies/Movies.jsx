@@ -14,98 +14,167 @@ import { useContext } from "react";
 const sortingOptions = [
     {
         id: 'title',
-        name: TEXTS.PL.title,
+        name: {
+            PL: 'Tytuł',
+            EN: 'Title',
+        },
     },
     {
         id: 'release_date',
-        name: TEXTS.PL.release_date,
+        name: {
+            PL: 'Data wydania',
+            EN: 'Release date',
+        },
     },
     {
         id: 'vote_average',
-        name: TEXTS.PL.vote_average,
+        name: {
+            PL: 'Ocena',
+            EN: 'Rating',
+        },
     },
     {
         id: 'popularity',
-        name: TEXTS.PL.popularity,
+        name: {
+            PL: 'Popularność',
+            EN: 'Popularity',
+        },
     },
 ];
 
 const genres = [
 	{
 		id: 28,
-		name: 'Akcja',
+		name: {
+            PL: 'Akcja',
+            EN: 'Action',
+        },
 	},
 	{
 		id: 12,
-		name: 'Przygodowy',
+		name: {
+            PL: 'Przygodowy',
+            EN: 'Adventure',
+        },
 	},
 	{
 		id: 16,
-		name: 'Animacja',
+		name: {
+            PL: 'Animacja',
+            EN: 'Animation',
+        },
 	},
 	{
 		id: 35,
-		name: 'Komedia',
+		name: {
+            PL: 'Komedia',
+            EN: 'Comedy',
+        },
 	},
 	{
 		id: 80,
-		name: 'Kryminał',
+		name: {
+            PL: 'Dramat kryminalny',
+            EN: 'Crime',
+        }
 	},
 	{
 		id: 99,
-		name: 'Dokumentalny',
+		name: {
+            PL: 'Dokumentalny',
+            EN: 'Documentary',
+        }
 	},
 	{
 		id: 18,
-		name: 'Dramat',
+		name: {
+            PL: 'Dramat',
+            EN: 'Drama',
+        }
 	},
 	{
 		id: 10751,
-		name: 'Familijny',
+		name: {
+            PL: 'Familijny',
+            EN: 'Family',
+        }
 	},
 	{
 		id: 14,
-		name: 'Fantasy',
+		name: {
+            PL: 'Fantasy',
+            EN: 'Fantasy',
+        }
 	},
 	{
 		id: 36,
-		name: 'Historyczny',
+		name: {
+            PL: 'Historia',
+            EN: 'History',
+        }
 	},
 	{
 		id: 27,
-		name: 'Horror',
+		name: {
+            PL: 'Horror',
+            EN: 'Horror',
+        }
 	},
 	{
 		id: 10402,
-		name: 'Muzyczny',
+		name: {
+            PL: 'Muzyczny',
+            EN: 'Music',
+        }
 	},
 	{
 		id: 9648,
-		name: 'Tajemnica',
+		name: {
+            PL: 'Tajemnica',
+            EN: 'Mystery',
+        }
 	},
 	{
 		id: 10749,
-		name: 'Romans',
+		name: {
+            PL: 'Romans',
+            EN: 'Romance',
+        }
 	},
 	{
 		id: 878,
-		name: 'Sci-Fi',
+		name: {
+            PL: 'Sci-Fi',
+            EN: 'Science Fiction',
+        }
 	},
 	{
 		id: 10770,
-		name: 'film TV',
+		name: {
+            PL: 'Telewizyjny film',
+            EN: 'TV Movie',
+        }
 	},
 	{
 		id: 53,
-		name: 'Thriller',
+		name: {
+            PL: 'Thriller',
+            EN: 'Thriller',
+        }
 	},
 	{
 		id: 10752,
-		name: 'Wojenny',
+		name: {
+            PL: 'Wojenny',
+            EN: 'War',
+        }
 	},
 	{
 		id: 37,
-		name: 'Western',
+		name: {
+            PL: 'Western',
+            EN: 'Western',
+        }
 	},
 ];
 
@@ -245,7 +314,7 @@ export function Movies() {
     const [filteredMovies, setFilteredMovies] = useState(firstFourMovies);
     const [filters, setFilters] = useState([]);
 
-    const years = [... new Set(firstFourMovies.map(movie => movie.release_date.split('-')[0]))].map((year, index) => ({ id: year, name: year }));
+    const years = [... new Set(firstFourMovies.map(movie => movie.release_date.split('-')[0]))].map((year, index) => ({ id: year, name: {[language]: year} }));
 
     const setFilter = (filter) => {
         setFilters(prevFilters => {

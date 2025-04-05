@@ -15,7 +15,7 @@ export function ExclusiveListItem({blog}) {
         <Link className={styles.image}>
             <img src={blog.image} alt={blog.title}/>
         </Link>
-        <Link to={`/blog/${blog.id}`} className={styles.title}>{blog.title}</Link>
+        <Link className={styles.title}>{blog.title}</Link>
         <VideoMeta type='small'>
             <p>{blog.views} {TEXTS[language].views}</p>
             <p>{ago}</p>

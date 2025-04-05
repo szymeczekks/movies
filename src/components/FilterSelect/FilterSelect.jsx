@@ -45,7 +45,7 @@ export function FilterSelect({ elements, setter, label, type, name }) {
                 <ul>
                     {/* <li>{label}</li> */}
                     {filteredElements.map( element => (
-                        <li className={[elementsActive.includes(element.id) ? styles.active : ''].join(' ')} key={element.id} onClick={() => onClick(element.id)}>{element.name}</li>
+                        <li className={[elementsActive.includes(element.id) ? styles.active : ''].join(' ')} key={element.id} onClick={() => onClick(element.id)}>{element.name[language]}</li>
                     ))}
                 </ul>
             </div>

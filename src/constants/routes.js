@@ -1,50 +1,92 @@
 export const ROUTES = {
-    home: {
-        categoryName: "Strona główna",
+    '/': {
+        categoryName: {
+            PL: "Strona główna",
+            EN: "Home",
+        },
     },
     movies: {
-        categoryName: "Filmy",
+        categoryName: {
+            PL: "Filmy",
+            EN: "Movies",
+        },
         subcategories: {
             genres: {
-                categoryName: "Gatunki",
+                categoryName: {
+                    PL: "Gatunki",
+                    EN: "Genres",
+                },
                 subcategories: {
                     action: {
-                        categoryName: "Akcja",
+                        categoryName: {
+                            PL: "Akcja",
+                            EN: "Action",
+                        },
                     },
                     comedy: {
-                        categoryName: "Komedia",
+                        categoryName: {
+                            PL: "Komedia",
+                            EN: "Comedy",
+                        },
                     },
                     drama: {
-                        categoryName: "Dramat",
+                        categoryName: {
+                            PL: "Dramat",
+                            EN: "Drama",
+                        },
                     },
                     fantasy: {
-                        categoryName: "Fantasy",
+                        categoryName: {
+                            PL: "Fantastyka",
+                            EN: "Fantasy",
+                        },
                     },
                     horror: {
-                        categoryName: "Horror",
+                        categoryName: {
+                            PL: "Horror",
+                            EN: "Horror",
+                        },
                     },
                     romance: {
-                        categoryName: "Romans",
+                        categoryName: {
+                            PL: "Romans",
+                            EN: "Romance",
+                        },
                     },
                 }
             },
             popular: {
-                categoryName: "Popularne",
+                categoryName: {
+                    PL: "Popularne",
+                    EN: "Popular",
+                },
                 subcategories: {
                     "most-popular": {
-                        categoryName: "Najpopularniejsze",
+                        categoryName: {
+                            PL: "Najpopularniejsze",
+                            EN: "Most Popular",
+                        },
                     },
                     "new-releases": {
-                        categoryName: "Nowości",
+                        categoryName: {
+                            PL: "Nowości",
+                            EN: "New Releases",
+                        },
                     },
                     recommended: {
-                        categoryName: "Polecane",
+                        categoryName: {
+                            PL: "Polecane",
+                            EN: "Recommended",
+                        },
                     },
                 }
             },
         }
     },
     blog: {
-        categoryName: "Blog",
+        categoryName: {
+            PL: "Blog",
+            EN: "Blog",
+        },
     }
 }

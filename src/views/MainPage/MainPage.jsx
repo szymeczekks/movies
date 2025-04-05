@@ -15,6 +15,8 @@ import { VideoOnClick } from '../../components/VideoOnClick/VideoOnClick';
 import { ExclusiveListItem } from '../../components/ExclusiveListItem/ExclusiveListItem';
 import { ArtistsListItem } from '../../components/ArtistsListItem/ArtistsListItem';
 import { BlogListItem } from '../../components/BlogListItem/BlogListItem';
+import { LanguageContext } from '../../context/LanguageContext';
+import { useContext } from 'react';
 
 const exclusiveItems = [
     {
@@ -125,17 +127,18 @@ const blogItems = [
 
 
 export function MainPage() {
+    const [language] = useContext(LanguageContext);
     const movies = useLoaderData();
     const firstFourMovies = movies.slice(0, 4);
 
     return <>
         <HeroCarousel movies={firstFourMovies}/>
-        <ListSection title={TEXTS.PL.trending_movies}>
+        <ListSection title={TEXTS[language].trending_movies}>
             {firstFourMovies.map((movie) => <MoviePreviewItem key={movie.id} movie={movie} />)}
             {firstFourMovies.map((movie) => <MoviePreviewItem key={movie.id} movie={movie} />)}
             {firstFourMovies.map((movie) => <MoviePreviewItem key={movie.id} movie={movie} />)}
         </ListSection>
-        <ListSection title={TEXTS.PL.new_release}>
+        <ListSection title={TEXTS[language].new_release}>
             {firstFourMovies.map((movie) => <AddToListItem key={movie.id} movie={movie} />)}
             {firstFourMovies.map((movie) => <AddToListItem key={movie.id} movie={movie} />)}
             {firstFourMovies.map((movie) => <AddToListItem key={movie.id} movie={movie} />)}
@@ -146,7 +149,7 @@ export function MainPage() {
             {Object.values(firstFourMovies[0].videos).map((video) => <VideoOnClick key={video.id} video={video} />)}
             </ThumbnailCarousel>
         </HeroSection>
-        <ListSection title={TEXTS.PL.deal_of_the_week}>
+        <ListSection title={TEXTS[language].deal_of_the_week}>
             {firstFourMovies.map((movie) => <AddToListDescriptionItem key={movie.id} movie={movie} />)}
             {firstFourMovies.map((movie) => <AddToListDescriptionItem key={movie.id} movie={movie} />)}
             {firstFourMovies.map((movie) => <AddToListDescriptionItem key={movie.id} movie={movie} />)}
@@ -161,12 +164,12 @@ export function MainPage() {
                 slidesPerView: 3
             }
         }} 
-        title={TEXTS.PL.exclusive_videos} 
-        subtitle={TEXTS.PL.exclusive_videos_subtitle}>
+        title={TEXTS[language].exclusive_videos} 
+        subtitle={TEXTS[language].exclusive_videos_subtitle}>
             {exclusiveItems.map((blog) => <ExclusiveListItem key={blog.id} blog={blog} />)}
         </ListSection>
         <ListSection 
-        title={TEXTS.PL.top_artists}
+        title={TEXTS[language].top_artists}
         slidesPerView={8}
         breakpoints={{
             0: {
@@ -197,7 +200,7 @@ export function MainPage() {
                 slidesPerView: 3
             }
         }} 
-        title={TEXTS.PL.top_news}>
+        title={TEXTS[language].top_news}>
             {blogItems.map((blog) => <BlogListItem key={blog.id} blog={blog} />)}
         </ListSection>
     </>

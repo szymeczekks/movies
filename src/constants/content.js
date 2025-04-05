@@ -13,6 +13,7 @@ export const TEXTS = {
         'see_details': 'Zobacz szczegóły',
         'new_release': 'Nowe premiery',
         'add_to_my_list': 'Dodaj do mojej listy',
+        'added_to_my_list': 'Dodano do mojej listy',
         'deal_of_the_week': 'Oferta tygodnia',
         'watch_trailer': 'Zobacz zwiastun',
         'exclusive_videos': 'Filmy ekskluzywne',
@@ -46,7 +47,14 @@ export const TEXTS = {
         'popular_posts': 'Popularne posty',
         'categories': 'Kategorie',
         'search_tip': 'Proszę wprowadzić słowo kluczowe',
-        'no_reviews': 'Brak recenzji'
+        'no_reviews': 'Brak recenzji',
+        'login': 'Zaloguj się',
+        'login_username': 'Nazwa użytkownika',
+        'login_password': 'Hasło',
+        'alreadyLoggedIn': 'Już jesteś zalogowany',
+        'add_review_title_not_logged_in': 'Zaloguj się, aby dodać recenzję',
+        'my_list': 'Moja lista',
+        'delete_from_list': 'Usuń z listy',
     },
     "EN": {
         'subscribe': 'Subscribe',
@@ -62,6 +70,7 @@ export const TEXTS = {
         'see_details': 'See details',
         'new_release': 'New release',
         'add_to_my_list': 'Add to my list',
+        'added_to_my_list': 'Added to my list',
         'deal_of_the_week': 'Deal of the week',
         'watch_trailer': 'Watch trailer',
         'exclusive_videos': 'Exclusive videos',
@@ -95,7 +104,14 @@ export const TEXTS = {
         'popular_posts': 'Popular posts',
         'categories': 'Categories',
         'search_tip': 'Please enter a keyword',
-        'no_reviews': 'No reviews yet'
+        'no_reviews': 'No reviews yet',
+        'login': 'Log in',
+        'login_username': 'Username',
+        'login_password': 'Password',
+        'alreadyLoggedIn': 'You are already logged in',
+        'add_review_title_not_logged_in': 'Log in to add a review',
+        'my_list': 'My list',
+        'delete_from_list': 'Delete from list',
     }
 };
 

@@ -13,11 +13,11 @@ export function TopPosts({posts}) {
             <ul>
                 {posts.map(post => (
                     <li className={styles.post} key={post.id}>
-                        <Link to={`/blog/${post.id}`} className={styles.image}>
+                        <Link className={styles.image}>
                             <img src={post.image} alt="" />
                         </Link>
                         <div className={styles.content}>
-                            <Link to={`/blog/${post.id}`} className={styles.title}>
+                            <Link className={styles.title}>
                                 <h3>{post.title}</h3>
                             </Link>
                             <p>{post.date}</p>

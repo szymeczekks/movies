@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import styles from './FilterBy.module.css';
+import { LanguageContext } from '../../context/languageContext';
 
 export function FilterBy({ key, setter, elements, header, name }) {
     const [elementsActive, setElementsActive] = useState([]);
+    const [language] = useContext(LanguageContext);
 
     const onClick = (element) => {
         setElementsActive( prevElements => {
@@ -18,7 +20,7 @@ export function FilterBy({ key, setter, elements, header, name }) {
             <ul className={styles.list}>
                 {elements.map(element => {
                     return <li className={[elementsActive.includes(element.name) ? styles.active : ''].join(' ')} key={element.id} onClick={() => onClick(element.name)}>
-                        {element.name}
+                        {element.name[language]}
                     </li>
                 })}
             </ul>

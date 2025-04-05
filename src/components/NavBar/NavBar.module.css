@@ -8,7 +8,7 @@
 }
 
 .navMoving.scrolled {
-    background: linear-gradient(180deg, var(--main-background) 30%, var(--background-item) 100%);
+    background: linear-gradient(0deg, var(--main-background) 30%, var(--background-item) 100%);
 }
 
 .nav {

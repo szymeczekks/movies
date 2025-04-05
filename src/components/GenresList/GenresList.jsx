@@ -13,15 +13,15 @@ export function GenresList({ genres }) {
                 {genres.map(genre => {
                     let categoryPath = '';
                     for (const key of Object.keys(PATHS)) {
-                        if (PATHS[key][language] === genre.name) {
+                        if (PATHS[key][language] === genre.name[language]) {
                             categoryPath = key;
                             break;
                         }
                     }
 
-                    return <NavLink key={genre.id} to={`/movies/${categoryPath}`}>
-                        {genre.name}
-                    </NavLink>
+                    return <a key={genre.id}>
+                        {genre.name[language]}
+                    </a>
                 })}
             </ul>
         </div>

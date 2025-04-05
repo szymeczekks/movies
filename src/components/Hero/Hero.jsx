@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './Hero.module.css';
 import { VideoMeta } from '../VideoMeta/VideoMeta';
 import { VideoBadge } from '../VideoBadge/VideoBadge';
@@ -8,19 +8,26 @@ import { Button } from '../Button/Button';
 import PLAY_ICON from '../../assets/play.svg';
 import BOOKMARK_ICON from '../../assets/bookmark.svg';
 import { ReactSVG } from 'react-svg';
-import { IMAGES, GENRES } from '../../constants/api';
+import { IMAGES } from '../../constants/api';
 import { useEffect, useState } from 'react';
 import { TEXTS } from '../../constants/content';
 import { translateGenres } from '../../functions/translateGenres';
 import { LanguageContext } from '../../context/languageContext';
 import { useContext } from 'react';
+import { ListContext } from '../../context/ListContext';
 
 
 
 export function Hero({movie, isActive}) {
     const [filmActive, setFilmActive] = useState(false);
     const [language] = useContext(LanguageContext);
-    const navigate = useNavigate();
+    const [list, addToList] = useContext(ListContext);
+
+    // function addToList(id) {
+    //     if (list.includes(id)) return;
+
+    //     setList(prevList => [...prevList, id]);
+    // }
 
     useEffect(() => {
         let filmTimeout;
@@ -54,8 +61,8 @@ export function Hero({movie, isActive}) {
                 </VideoMeta>
                 <VideoDescription>{movie.overview}</VideoDescription>
                 <div className={styles.heroButtons}>
-                    <Button onClick={() => navigate(`/movie/${movie.id}`)}>{TEXTS[language].watch_now} <ReactSVG src={PLAY_ICON} /></Button>
-                    <Link>{TEXTS[language].watch_later} <ReactSVG src={BOOKMARK_ICON} /></Link>
+                    <Button to={`/movie/${movie.id}`}>{TEXTS[language].watch_now} <ReactSVG src={PLAY_ICON} /></Button>
+                    <a onClick={(e) => addToList(e, movie)}>{TEXTS[language].watch_later} <ReactSVG src={BOOKMARK_ICON} /></a>
                 </div>
             </div>
         </div>

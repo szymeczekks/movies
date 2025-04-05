@@ -1,14 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100vh;
+    color: var(--main-text-color);
+}
+
 .title {
     color: var(--main-text-color);
     line-height: 1rem;
-}
-
-.notLogged .title {
-    margin: 2rem 0;
-}
-
-.subtitle {
-    color: var(--gray-text-color);
 }
 
 .form {
@@ -16,19 +18,19 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border: var(--main-text-color) solid 1px;
+    border-radius: 1rem;
 }
 
 .form label {
     font-weight: 600;
 }
 
-.form textarea {
-    resize: vertical;
-}
-
-.form input:not([type="checkbox"]),
-.form textarea {
+.form input:not([type="checkbox"]) {
     padding: 0.5rem;
     border: none;
     border-radius: 0.25rem;
@@ -36,32 +38,10 @@
     color: var(--main-text-color);
 }
 
-.form .checkboxWrapper label {
-    font-weight: 400;
-    color: var(--gray-text-color);
-}
-
 .inputWrapper {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-}
-
-.checkboxWrapper {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.inputRow {
-    display: flex;
-    gap: 1rem;
-    flex: 1;
-}
-
-.inputRow .inputWrapper {
-    flex: 1;
-    min-width: 0;
 }
 
 .form button {
