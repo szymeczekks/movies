@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { TEXTS } from '../../constants/content';
 import styles from './TopPosts.module.css';
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { useContext } from "react";
 
 export function TopPosts({posts}) {

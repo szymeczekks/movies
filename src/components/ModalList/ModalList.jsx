@@ -2,7 +2,7 @@ import { ROUTES } from "../../constants/routes";
 import ARROW_DOWN from '../../assets/arrow-down.svg'
 import styles from "./ModalList.module.css";
 import { ReactSVG } from "react-svg";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { useContext } from "react";
 
 export function ModalList({subcategories = null, className = ''}) {

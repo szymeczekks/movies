@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./NavList.module.css";
 import ARROW_DOWN from '../../assets/arrow-down.svg'
 import { ReactSVG } from "react-svg";
-import { LanguageContext } from '../../context/languageContext';
+import { LanguageContext } from '../../context/LanguageContext';
 import { useContext } from 'react';
 
 export function NavList({subcategories = null, className = ''}) {

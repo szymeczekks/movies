@@ -5,8 +5,8 @@ import { Stars } from '../Stars/Stars';
 import { useFetcher } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
-import { AuthContext } from '../../context/authContext';
-import { LanguageContext } from '../../context/languageContext';
+import { AuthContext } from '../../context/AuthContext';
+import { LanguageContext } from '../../context/LanguageContext';
 import { useContext, useEffect } from 'react';
 import { useState } from 'react';
 

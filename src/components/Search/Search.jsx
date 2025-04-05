@@ -3,7 +3,7 @@ import { ReactSVG } from "react-svg";
 import SEARCH_ICON from '../../assets/search-icon.svg'
 import styles from "./Search.module.css";
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { TEXTS } from "../../constants/content";
 
 export function Search({className = ''}) {

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { TEXTS } from '../../constants/content';
 import { HorizontalCarousel } from '../HorizontalCarousel/HorizontalCarousel';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export function ListSection({children, title, subtitle = null, slidesPerView = 'auto', breakpoints = {}}) {
     const [language] = useContext(LanguageContext);

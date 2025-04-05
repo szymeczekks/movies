@@ -8,7 +8,7 @@ import { ReactSVG } from 'react-svg';
 import PLAY_ICON from '../../assets/play.svg';
 import { TEXTS } from '../../constants/content';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { ListContext } from '../../context/ListContext';
 
 export function AddToListItem({movie}) {

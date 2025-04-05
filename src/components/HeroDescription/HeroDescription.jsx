@@ -5,7 +5,7 @@ import PLAY_ICON from '../../assets/play.svg';
 import PLUS_ICON from '../../assets/plus.svg';
 import { ReactSVG } from 'react-svg';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { ListContext } from '../../context/ListContext';
 
 export function HeroDescription({movie}) {

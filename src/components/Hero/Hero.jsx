@@ -12,7 +12,7 @@ import { IMAGES } from '../../constants/api';
 import { useEffect, useState } from 'react';
 import { TEXTS } from '../../constants/content';
 import { translateGenres } from '../../functions/translateGenres';
-import { LanguageContext } from '../../context/languageContext';
+import { LanguageContext } from '../../context/LanguageContext';
 import { useContext } from 'react';
 import { ListContext } from '../../context/ListContext';
 

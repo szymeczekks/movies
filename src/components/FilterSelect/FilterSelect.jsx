@@ -4,7 +4,7 @@ import ARROW_ICON from '../../assets/arrow-down.svg';
 import styles from './FilterSelect.module.css';
 import { useState, useRef } from 'react';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export function FilterSelect({ elements, setter, label, type, name }) {
     const [language] = useContext(LanguageContext);

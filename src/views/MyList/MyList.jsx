@@ -3,7 +3,7 @@ import { ListSection } from '../../components/ListSection/ListSection';
 import { TEXTS } from '../../constants/content';
 import styles from './MyList.module.css';
 import { ListContext } from '../../context/ListContext';
-import { LanguageContext } from '../../context/languageContext';
+import { LanguageContext } from '../../context/LanguageContext';
 import { DeleteFromListItem } from '../../components/DeleteFromListItem/DeleteFromListItem';
 
 export function MyList() {

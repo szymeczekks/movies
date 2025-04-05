@@ -4,7 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import ARROW_ICON from '../../assets/arrow-down.svg';
 import { PATHS } from '../../constants/content';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export function Breadcrumbs() {
     const [language] = useContext(LanguageContext);

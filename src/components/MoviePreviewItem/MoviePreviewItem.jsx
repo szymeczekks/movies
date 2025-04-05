@@ -11,7 +11,7 @@ import { ReactSVG } from 'react-svg';
 import INFO_ICON from '../../assets/info.svg';
 import BOOKMARK_ICON from '../../assets/bookmark.svg';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { ListContext } from '../../context/ListContext';
 
 export function MoviePreviewItem({ movie }) {

@@ -5,7 +5,7 @@ import { VideoMeta } from '../VideoMeta/VideoMeta';
 import { TEXTS } from '../../constants/content';
 import { Button } from '../Button/Button';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { ListContext } from '../../context/ListContext';
 
 export function AddToListDescriptionItem({movie}) {

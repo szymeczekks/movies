@@ -11,7 +11,7 @@ import { VideoBadge } from '../../components/VideoBadge/VideoBadge';
 import { getYear } from '../../functions/dateToAgo';
 import { ListSection } from '../../components/ListSection/ListSection';
 import { AddToListDescriptionItem } from '../../components/AddToListDescriptionItem/AddToListDescriptionItem';
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { useContext } from "react";
 import { Stars } from '../../components/Stars/Stars';
 import { ReviewsWrapper } from '../../components/ReviewsWrapper/ReviewsWrapper';

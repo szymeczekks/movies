@@ -7,7 +7,7 @@ import SHARE_ICON from '../../assets/share.svg';
 import LIKE_ICON from '../../assets/like.svg';
 import { ReactSVG } from 'react-svg';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { ListContext } from '../../context/ListContext';
 
 export function MoviePoster({ movie }) {
@@ -24,7 +24,7 @@ export function MoviePoster({ movie }) {
             <div className={styles.social}>
                 <Button type={['x-small','gray']}>{TEXTS[language].likes} <ReactSVG src={LIKE_ICON}/></Button>
                 <Button type={['x-small','gray']}>{TEXTS[language].share} <ReactSVG src={SHARE_ICON}/></Button>
-                <Button onClick={(e) => addToList(e, movie)} type={['x-small','gray']}>{isInList ? TEXTS[language].added_to_my_list : <>{TEXTS[language].add_to_my_list} <ReactSVG src={PLUS_ICON}/></>} </Button>
+                <Button onClick={(e) => addToList(e, movie.id)} type={['x-small','gray']}>{isInList ? TEXTS[language].added_to_my_list : <>{TEXTS[language].add_to_my_list} <ReactSVG src={PLUS_ICON}/></>} </Button>
             </div>
             <Button type={['gray']}>{TEXTS[language].download_video} <ReactSVG src={DOWNLOAD_ICON}/></Button>
         </div>

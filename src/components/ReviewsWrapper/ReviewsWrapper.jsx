@@ -4,7 +4,7 @@ import { AddReview } from '../AddReview/AddReview';
 import { Reviews } from '../Reviews/Reviews';
 import { TEXTS } from '../../constants/content';
 
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { useContext } from "react";
 
 export function ReviewsWrapper({ reviews, userData }) {

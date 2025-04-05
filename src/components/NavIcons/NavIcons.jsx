@@ -10,7 +10,7 @@ import { createPortal } from "react-dom";
 import { LANGUAGES } from "../../constants/content";
 import { ModalMenu } from "../ModalMenu/ModalMenu";
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { ListContext } from "../../context/ListContext";
 
 export function NavIcons() {

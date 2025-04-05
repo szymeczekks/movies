@@ -7,7 +7,7 @@ import { NavIcons } from '../NavIcons/NavIcons.jsx';
 import { TEXTS } from '../../constants/content.js';
 import { useEffect, useState } from 'react';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export function NavBar() {
     const [ language ] = useContext(LanguageContext);

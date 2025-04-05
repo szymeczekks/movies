@@ -3,7 +3,7 @@ import { TEXTS } from '../../constants/content';
 import { translateGenres } from '../../functions/translateGenres';
 import { VideoMeta } from '../VideoMeta/VideoMeta';
 import styles from './TopList.module.css';
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { useContext } from "react";
 
 export function TopList({ movies }) {

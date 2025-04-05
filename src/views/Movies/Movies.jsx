@@ -8,7 +8,7 @@ import { PageHeader } from '../../components/PageHeader/PageHeader';
 import { TopList } from '../../components/TopList/TopList';
 import { TEXTS } from '../../constants/content';
 import styles from './Movies.module.css';
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { useContext } from "react";
 
 const sortingOptions = [

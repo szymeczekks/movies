@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import styles from './FilterBy.module.css';
-import { LanguageContext } from '../../context/languageContext';
+import { LanguageContext } from '../../context/LanguageContext';
 
 export function FilterBy({ key, setter, elements, header, name }) {
     const [elementsActive, setElementsActive] = useState([]);

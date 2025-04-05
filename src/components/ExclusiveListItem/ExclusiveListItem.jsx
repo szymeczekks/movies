@@ -4,7 +4,7 @@ import { VideoMeta } from '../VideoMeta/VideoMeta';
 import { TEXTS } from '../../constants/content';
 import { dateToAgo } from '../../functions/dateToAgo';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export function ExclusiveListItem({blog}) {
     const [language] = useContext(LanguageContext);

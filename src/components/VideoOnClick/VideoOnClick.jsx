@@ -3,7 +3,7 @@ import styles from './VideoOnClick.module.css';
 import PLAY_ICON from '../../assets/play.svg';
 import { TEXTS } from '../../constants/content';
 import { useState } from 'react';
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import { useContext } from "react";
 
 export function VideoOnClick({ video, thumb }) {

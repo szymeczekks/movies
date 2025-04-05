@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { PATHS, TEXTS } from '../../constants/content';
 import styles from './GenresList.module.css';
 import { useContext } from "react";
-import { LanguageContext } from "../../context/languageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export function GenresList({ genres }) {
     const [language] = useContext(LanguageContext);
